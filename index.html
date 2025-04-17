@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud Formal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00, #ff0000);
+      background-size: 400% 400%;
+      animation: rainbow 10s ease infinite;
+      color: #fff;
+      text-align: center;
+      cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur804.cur'), auto;
+    }
+
+    @keyframes rainbow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      margin-top: 10vh;
+      font-size: 6vw;
+      text-shadow: 3px 3px 0 #000, -2px -2px 0 #ff0;
+      animation: pulse 1s infinite alternate;
+      padding: 0 5vw;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.05) rotate(-1deg); }
+    }
+
+    .mensaje {
+      margin: 10vh auto 5vh;
+      font-size: 5vw;
+      background: #ffcc00;
+      border: 5px dashed #000;
+      padding: 4vh 5vw;
+      color: #000;
+      max-width: 90vw;
+      border-radius: 15px;
+      text-shadow: 1px 1px #fff;
+      animation: girar 3s infinite linear;
+    }
+
+    @keyframes girar {
+      0% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+      100% { transform: rotate(-2deg); }
+    }
+
+    button {
+      font-size: 5vw;
+      padding: 2vh 5vw;
+      margin-bottom: 5vh;
+      background: #00ff00;
+      border: 3px solid #000;
+      box-shadow: inset 2px 2px #fff, 2px 2px 0 #000;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      background: #ff0000;
+      color: #fff;
+    }
+    .cursed-img-container {
+  position: relative;
+  width: 90vw;
+  max-width: 400px;
+  margin: 5vh auto;
+}
+
+.cursed-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.img-fondo {
+  position: relative;
+  z-index: 1;
+}
+
+.img-capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  pointer-events: none;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Solicitud Formal de Recursos</h1>
+
+  <div class="cursed-img-container">
+    <img src="sheyla.png" alt="" class="img-fondo">
+    <img src="https://preview.redd.it/25v4rc7gfkn71.png?width=4096&format=png&auto=webp&s=b81a62cd84491aa2de3687089ac6ed1a0819d525" alt="" class="img-capa">
+  </div>
+
+  <div class="mensaje">
+    🖼️ ¡Dame los banners pues, <strong>Sheyla</strong>!<br>
+    No me hagas buscarlos en Paint 😤💥
+  </div>
+
+  <button onclick="reproducirSonido()">Haz clic si no escuchaste el audio 🎵</button>
+
+  <audio id="audio">
+    <source src="https://www.myinstants.com/media/sounds/bruh.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5 😢
+  </audio>
+
+  <script>
+    function reproducirSonido() {
+      const audio = document.getElementById('audio');
+      audio.play().catch((e) => {
+        alert("Tu navegador bloqueó el audio, intenta tocar de nuevo.");
+      });
+    }
+
+    // Intenta reproducir si el navegador lo permite
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const audio = document.getElementById('audio');
+        audio.play().catch(() => {});
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
