@@ -1,143 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solicitud Formal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Día del Trabajador</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00, #ff0000);
-      background-size: 400% 400%;
-      animation: rainbow 10s ease infinite;
-      color: #fff;
+      background: linear-gradient(135deg, #fcd3ec, #fff0f5);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #d63384;
       text-align: center;
-      cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur804.cur'), auto;
     }
 
-    @keyframes rainbow {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    .container {
+      padding: 25px;
     }
 
     h1 {
-      margin-top: 10vh;
-      font-size: 6vw;
-      text-shadow: 3px 3px 0 #000, -2px -2px 0 #ff0;
-      animation: pulse 1s infinite alternate;
-      padding: 0 5vw;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 5px white;
     }
 
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.05) rotate(-1deg); }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
     }
 
-    .mensaje {
-      margin: 10vh auto 5vh;
-      font-size: 5vw;
-      background: #ffcc00;
-      border: 5px dashed #000;
-      padding: 4vh 5vw;
-      color: #000;
-      max-width: 90vw;
-      border-radius: 15px;
-      text-shadow: 1px 1px #fff;
-      animation: girar 3s infinite linear;
+    img {
+      width: 85%;
+      max-width: 350px;
+      border-radius: 20px;
+      margin: 10px auto;
+      box-shadow: 0 0 15px #ff69b4;
+      display: block;
     }
 
-    @keyframes girar {
-      0% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
-      100% { transform: rotate(-2deg); }
+    .glitter {
+      animation: sparkle 2s infinite ease-in-out;
     }
 
-    button {
-      font-size: 5vw;
-      padding: 2vh 5vw;
-      margin-bottom: 5vh;
-      background: #00ff00;
-      border: 3px solid #000;
-      box-shadow: inset 2px 2px #fff, 2px 2px 0 #000;
-      border-radius: 10px;
+    @keyframes sparkle {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.4); }
     }
 
-    button:hover {
-      background: #ff0000;
-      color: #fff;
+    footer {
+      font-size: 0.9em;
+      margin-top: 35px;
+      color: #b03060;
     }
-    .cursed-img-container {
-  position: relative;
-  width: 90vw;
-  max-width: 400px;
-  margin: 5vh auto;
-}
-
-.cursed-img-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-.img-fondo {
-  position: relative;
-  z-index: 1;
-}
-
-.img-capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 1;
-  pointer-events: none;
-}
-
   </style>
 </head>
 <body>
-  <h1>Solicitud Formal de Recursos</h1>
+  <div class="container">
+    <h1 class="glitter">🎉 ¡Feliz Día del Trabajador, Ángela y Sheyla! 💼🐾</h1>
+    
+    <p>Gracias por su compromiso, profesionalismo y buena onda todos los días. 🙌</p>
 
-  <div class="cursed-img-container">
-    <img src="sheyla.png" alt="" class="img-fondo">
-    <img src="https://preview.redd.it/25v4rc7gfkn71.png?width=4096&format=png&auto=webp&s=b81a62cd84491aa2de3687089ac6ed1a0819d525" alt="" class="img-capa">
+    <p>Ángela, tu liderazgo inspira. Y Sheyla, tu creatividad hace que todo brille ✨.</p>
+
+    <img src="data:image/jpeg;base64,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" alt="Gatito motivado" />
+    <img src="https://i.pinimg.com/originals/31/a7/2a/31a72afda250825d993400c3ef28c55c.gif" alt="Gatito agradecido" />
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Gato divertido" />
+
+
+    <p class="glitter">¡Gracias también por este día libre, se valora más que el café de la mañana! 😻☕</p>
+
+    <footer>Hecho con gratitud, cariño y muchos gatitos. Feliz día 💖🐱</footer>
   </div>
-
-  <div class="mensaje">
-    🖼️ ¡Dame los banners pues, <strong>Sheyla</strong>!<br>
-    No me hagas buscarlos en Paint 😤💥
-  </div>
-
-  <button onclick="reproducirSonido()">Haz clic si no escuchaste el audio 🎵</button>
-
-  <audio id="audio">
-    <source src="https://www.myinstants.com/media/sounds/bruh.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5 😢
-  </audio>
-
-  <script>
-    function reproducirSonido() {
-      const audio = document.getElementById('audio');
-      audio.play().catch((e) => {
-        alert("Tu navegador bloqueó el audio, intenta tocar de nuevo.");
-      });
-    }
-
-    // Intenta reproducir si el navegador lo permite
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const audio = document.getElementById('audio');
-        audio.play().catch(() => {});
-      }, 1000);
-    });
-  </script>
 </body>
 </html>
